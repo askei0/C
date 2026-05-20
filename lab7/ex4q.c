@@ -14,31 +14,28 @@
 
 int main()
 {
+	srand(time(0));
 
-    // const int correctGuess = 123;
-    srand(time(0));
-    
-    // printf("%ld\n", time(NULL));
+	int WINNER_NUM = rand() % 1001;
 
-    int WINNER_NUM = rand() % 1001;//  
+	printf("Correct Guess is %d: ", WINNER_NUM);
 
-    printf("Correct guess is: %d\n", WINNER_NUM);
+	int num, cnt = 0;
 
-    int num, counter = 0;
+	do
+	{
+		scanf("%d", &num);
 
-    do
-    {
-        scanf("%d", &num);
+		if (num > WINNER_NUM)
+			printf("Go less\n");
 
-        if (num > WINNER_NUM)
-            printf("Go less\n");
-        
-        if(num < WINNER_NUM)
-            printf("Go Big\n");
+		if (num < WINNER_NUM)
+			printf("Go big\n");
 
-        counter++;
+		cnt++;
+	}while (num != WINNER_NUM);
 
-    } while (num != WINNER_NUM);
+	printf("Congrats\n Num of guesses: %d\n", cnt);
 
-    printf("Congrats\nNum of Guesses: %d\n", counter);
+
 }
