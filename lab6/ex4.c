@@ -13,11 +13,12 @@ int main(int argc, char *argv[])
 
     if (fp == NULL)
     {
-        printf("File openning failed\n");
+        printf("File opening failed\n");
         return -1;
     }
 
-    fprintf(fp, "Hakeem\n");
+    fprintf(fp, "Kayra\n");
 
+    //Dosya kapanmazsa veri kaybi yasanabilir
     fclose(fp);
 }
