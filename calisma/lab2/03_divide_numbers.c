@@ -9,5 +9,23 @@
 #include <stdio.h>
 
 int main() {
-    return 0;
+	int a = 4;
+	int b = 2;
+
+	int div = a / b;
+	printf("%d", div);
+
+	int c = 4;
+	int d = 0;
+	int div2 = c/d;
+	printf ("%d", div2);
+
+	float x = 4;
+	float z = 2;
+	float div3 = x/z;
+
+	printf ("%.2f", div3);
+	printf ("%d", div3);
+
+	return 0;
 }
