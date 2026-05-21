@@ -8,25 +8,26 @@
 
 char *reverse(char *str)
 {
+	int length = strlen(str);
 
-    int length = strlen(str);
-
-    for (int i = 0; i < length / 2; i++)
-    {
-        char temp = str[i];
-        str[i] = str[length - 1 - i];
-        str[length - 1 - i] = temp;
-    }
-    return str;
+	for (int i = 0; i < length / 2; i++)
+	{
+		char temp = str[i];
+		str[i] = str[length -1 -i];
+		str[length -1 -i] = temp;
+	}
+	return str;
 }
 
 int main()
 {
-    char str[41];
-    printf("Enter a string to reverse: ");
-    scanf("%s", str);
+	char str[41];
 
-    reverse(str);
+	printf("Enter a string: ");
+	scanf("%s", str);
 
-    printf("Reverse is : %s\n", str);
+	reverse(str);
+
+	printf("%s\n",str);
+
 }
