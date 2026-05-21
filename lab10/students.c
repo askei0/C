@@ -1,31 +1,25 @@
 // Let's create a new type called Student , with which we will represent students.
-//  Include ID, average, and age. The type of the average should be a double-precision
-//   floating-point number, the rest should be an integer.
-//    Let's examine the memory requirements of the type,
-//     experiment with the order of the data members,
-//  and observe its effect.
-
-// // For the sake of practicality,
-//  let's create an alias type with typedef,
-//   so that we can use the type without the struct prefix.
+// Include ID, average, and age. The type of the average should be a double-precision
+// floating-point number, the rest should be an integer.
+// Let's examine the memory requirements of the type,
+// experiment with the order of the data members,
+// and observe its effect.
+// For the sake of practicality,
+// let's create an alias type with typedef,
+// so that we can use the type without the struct prefix.
 
 // Let's create a function that receives a `Student'
-//  array and returns the ID of the student with the highest average.
+// array and returns the ID of the student with the highest average.
 
 
 // We handle BSc, MSc and PhD students separately,
 // for this we create an enumeration type (enum) called Level
-//  and add it to Student as a data member. 
+// and add it to Student as a data member. 
 
 // Depending on the type of student, store different additional data using a `union' type.
 // BSc: total number of courses attended (int).
 // MSc: the aggregate adjusted credit index (double)
 // PhD: the impact factor of the journal with the highest impact factor in which you published (double) 
-
-
- 
-
-
 
 #include<stdio.h>
 // #pragma pack(1)
