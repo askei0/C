@@ -1,0 +1,14 @@
+// Write a program that accepts a number as a command-line argument and reads as many words
+//  from the user as they enter. When you have entered them all,
+//  write the words in reverse order. Use an array.
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char *reverse(char *str)
+{
+	int length = strlen(str);
+
+	char *reversedStr = (char*)malloc((length -1)*sizeof(str));
+}
