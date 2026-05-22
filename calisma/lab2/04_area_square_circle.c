@@ -7,5 +7,24 @@
 #include <stdio.h>
 
 int main() {
-    return 0;
+
+	int length;
+	int r;
+	float pi = 3.1415; 
+	printf("Enter the length: ");
+	scanf("%d", &length);
+	printf("Enter the radius: ");
+	scanf("%d", &r);
+
+	int areasq = 0;
+
+	areasq = length * length;
+	
+	float areacrcl = 0;
+	areacrcl = pi * (r*r); 
+
+	printf("Area of the square: %d\n", areasq);
+	printf("Area of the circle: %f\n", areacrcl);
+
+	return 0;
 }
