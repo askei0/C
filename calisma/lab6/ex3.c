@@ -24,6 +24,7 @@ int main(int argc,char* argv[]){
 
 	printf("Fact: %d\n", fact(factor));
 
+	return 0;
 }
 
 
