@@ -1,6 +1,5 @@
 // Write a function (student_init) which, receiving aType parameter, creates a Student instance on the heap with the appropriate Type, fills the corresponding data members with random data, and then returns a pointer to the instance. Fill an array with pointers to such `Student' instances, then modify the function written in task 3 to return a pointer to the instance instead of an identifier. Be careful to avoid memory leaks.
 
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -31,7 +30,7 @@ struct Student {
 	ExtraInfo extraInfo;
 };
 
-Student* init_student(Level l){
+Student *init_student(Level l){
 	Student* s = (Student*)malloc(sizeof(Student));
 
 	static int ID = 0;
@@ -39,8 +38,8 @@ Student* init_student(Level l){
 	s->ID = ID++;
 	s->level = l;
 
-	s->Age = (rand() % 22 - 18) + 18; // (rand() % max - min) + min;
-	s->GPA = ((rand() % 100 - 500 ) + 100) / 100;
+	s->Age = ( rand() % (40 - 18) ) + 18; // (rand() % max - min) + min;
+	s->GPA = ((rand() % ( 500 - 100 )) + 100) / 100.0;
 	
 	switch (s -> level)
 	{
@@ -48,12 +47,11 @@ Student* init_student(Level l){
 		s->extraInfo.numOfCourses = rand() % 101;
 		break;
 	case MSc:
-		s-> extraInfo.creditIndex = ((rand() % 100 - 500 ) + 100) / 100;
+		s->extraInfo.creditIndex = ((rand() % (500 - 100) ) + 100) / 100.0;
 		break;
 
 	case PhD:
-		s->extraInfo.impactFactor = ((rand() % 100 - 500 ) + 100) / 100;
-
+		s->extraInfo.impactFactor = ((rand() % (500 - 100) ) + 100) / 100.0;
 		break;
 
 	default:
@@ -89,16 +87,16 @@ void printStudent(Student* s){
 
 		case BSc:
 			printf("Level: BSc\n");
-			printf("Number of courses: %d", s-> extraInfo.numOfCourses);
+			printf("Number of courses: %d\n", s->extraInfo.numOfCourses);
 		break;
 	case MSc:
 			printf("Level: MSc\n");
-			printf("Credit Ind: %d", s-> extraInfo.numOfCourses);
+			printf("Credit Ind: %.2lf\n", s->extraInfo.creditIndex);
 		break;
 
 	case PhD:
 			printf("Level: PhD\n");
-			printf("impact Factor: %d", s-> extraInfo.numOfCourses);
+			printf("impact Factor: %.2lf\n", s->extraInfo.impactFactor);
 
 		break;
 
